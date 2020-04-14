@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "title": "test",
+    "owner": "david gabel",
+    "description": "testing"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "so what",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
