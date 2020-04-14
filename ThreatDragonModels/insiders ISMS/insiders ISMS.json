@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "insiders ISMS",
+    "owner": "david gabel",
+    "description": "testing the new system"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "smart FIX",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "christopher hauck"
+  }
+}
