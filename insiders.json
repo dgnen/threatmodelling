@@ -1,0 +1,272 @@
+{
+  "summary": {
+    "title": "Inisders technology threat model",
+    "owner": "David Gabel",
+    "description": "Ein erstes Threat Model für die insiders Cloud Plattform"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Nico Weisenauer",
+        "$$hashKey": "object:440"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "smart FIX",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0,
+        "$$hashKey": "object:442",
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 170,
+                "y": 80
+              },
+              "angle": 0,
+              "id": "a35f715a-88a3-490e-a7df-486581c6e8a1",
+              "z": 1,
+              "hasOpenThreats": true,
+              "isEncrypted": false,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "title": "admin access to customer data",
+                  "type": "Tampering",
+                  "description": "An administrator could tamper with customer data in the matching servers cache",
+                  "mitigation": "identity and access management;\nsecure coding guidelines\nencrypt cache",
+                  "$$hashKey": "object:563"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "admin access to customer data",
+                  "type": "Information disclosure",
+                  "description": "An administrator could retrieve customer data from the cache",
+                  "mitigation": "secure coding guidelines\nidentity and access management\nencrypt matching server cache",
+                  "$$hashKey": "object:569"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Matching Server"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 250,
+                "y": 320
+              },
+              "angle": 0,
+              "id": "1fef8363-6ae7-4007-8fd5-cdcf441cb4c7",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Administrator"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "1fef8363-6ae7-4007-8fd5-cdcf441cb4c7"
+              },
+              "target": {
+                "id": "a35f715a-88a3-490e-a7df-486581c6e8a1"
+              },
+              "vertices": [],
+              "id": "6e126300-eb82-4aef-ba53-8caaef1bebcb",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Authorisierter Zugriff",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "protocol": "",
+              "threats": [],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 720,
+                "y": 400
+              },
+              "angle": 0,
+              "id": "01906d5f-eba6-475d-8c04-45d5ab8ecb88",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Attacker"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 100,
+                "y": 450
+              },
+              "target": {
+                "x": 900,
+                "y": 250
+              },
+              "vertices": [
+                {
+                  "x": 580,
+                  "y": 390
+                }
+              ],
+              "id": "0db141d9-1bb4-4706-81cd-5b342af7f0b2",
+              "z": 5,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 480,
+                "y": 70
+              },
+              "angle": 0,
+              "id": "ea912098-54c7-4736-bfb5-9fe76df1eff6",
+              "z": 6,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "a35f715a-88a3-490e-a7df-486581c6e8a1"
+              },
+              "target": {
+                "id": "ea912098-54c7-4736-bfb5-9fe76df1eff6"
+              },
+              "vertices": [],
+              "id": "6dd5047a-4283-4291-a291-53437314a3fb",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "speichert",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": true,
+              "protocol": "",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "title": "An attacker could sniff network traffic",
+                  "description": "backend communication is not encrypted. An attacker could sniff network traffic and retrieve confidential information",
+                  "mitigation": "strong encryption for backen communication;\nregularly review encryption methods;",
+                  "$$hashKey": "object:667"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 920
+        }
+      }
+    ],
+    "reviewer": "Christopher Hauck"
+  }
+}
